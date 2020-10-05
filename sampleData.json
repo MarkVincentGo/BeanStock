@@ -1,0 +1,69 @@
+{
+  "data": {
+    "stocks": [
+      {
+        "name": "berkshire hathaway",
+        "tick": "BRKB",
+        "price": 192.39,
+        "pe_ratio": 12.4,
+        "target_price": 150.29,
+        "fair_price": 180.39,
+        "website": "www.Berkshire.com"
+      },
+      {
+        "name": "Apple",
+        "tick": "AAPL",
+        "price": 432.44,
+        "pe_ratio": 12.4,
+        "target_price": 150.29,
+        "fair_price": 180.39,
+        "website": "www.apple.com"
+      },
+      {
+        "name": "Facebook",
+        "tick": "FB",
+        "price": 262.37,
+        "pe_ratio": 12.4,
+        "target_price": 150.29,
+        "fair_price": 180.39,
+        "website": "www.facebook.com"
+      },
+      {
+        "name": "Netflix",
+        "tick": "NFLX",
+        "price": 323.32,
+        "pe_ratio": 12.4,
+        "target_price": 150.29,
+        "fair_price": 180.39,
+        "website": "www.netflix.com"
+      },
+      {
+        "name": "Alphabet Class C",
+        "tick": "GOOG",
+        "price": 1524.34,
+        "pe_ratio": 12.4,
+        "target_price": 150.29,
+        "fair_price": 180.39,
+        "website": "www.google.com"
+      },
+      {
+        "name": "Amazon",
+        "tick": "AMZN",
+        "price": 3242.31,
+        "pe_ratio": 12.4,
+        "target_price": 150.29,
+        "fair_price": 180.39,
+        "website": "www.amazon.com"
+      },
+      {
+        "name": "Tesla",
+        "tick": "TSLA",
+        "price": 1642.13,
+        "pe_ratio": 12.4,
+        "target_price": 150.29,
+        "fair_price": 180.39,
+        "website": "www.tesla.com"
+      }
+    ]
+  }
+}

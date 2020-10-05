@@ -1,0 +1,142 @@
+[
+  {
+    "model": "stocks.company",
+    "fields": {
+      "name": "Berkshire Hathaway",
+      "tick": "BRKB",
+      "ten_year_price": 192.39,
+      "growth_rate_wsj": 24.3,
+      "growth_rate_yahoo": 12,
+      "pe_ratio": 12.4,
+      "website": "www.Berkshire.com",
+      "ttm_eps": 12.4,
+      "future_pe_ratio_calculated": 31.2,
+      "future_pe_ratio_analyst": 12.3,
+      "sp_500": true,
+      "dow_jones": false,
+      "nasdaq_composite": false,
+      "russell_2000": false,
+      "sector": "Technology"
+    }
+  },
+  {
+    "model": "stocks.company",
+    "fields":   {
+      "name": "Apple",
+      "tick": "AAPL",
+      "ten_year_price": 432.44,
+      "growth_rate_wsj": 24.3,
+      "growth_rate_yahoo": 12,
+      "pe_ratio": 12.4,
+      "website": "www.apple.com",
+      "ttm_eps": 12.4,
+      "future_pe_ratio_calculated": 31.2,
+      "future_pe_ratio_analyst": 12.3,
+      "sp_500": true,
+      "dow_jones": false,
+      "nasdaq_composite": false,
+      "russell_2000": false,
+      "sector": "Technology"
+    }
+  },
+  {
+    "model": "stocks.company",
+    "fields": {
+      "name": "Facebook",
+      "tick": "FB",
+      "ten_year_price": 262.37,
+      "growth_rate_wsj": 24.3,
+      "growth_rate_yahoo": 12,
+      "pe_ratio": 12.4,
+      "website": "www.facebook.com",
+      "ttm_eps": 12.4,
+      "future_pe_ratio_calculated": 31.2,
+      "future_pe_ratio_analyst": 12.3,
+      "sp_500": true,
+      "dow_jones": false,
+      "nasdaq_composite": false,
+      "russell_2000": false,
+      "sector": "Technology"
+    }
+  },
+  { 
+    "model": "stocks.company",
+    "fields": {
+      "name": "Netflix",
+      "tick": "NFLX",
+      "ten_year_price": 323.32,
+      "growth_rate_wsj": 24.3,
+      "growth_rate_yahoo": 12,
+      "pe_ratio": 12.4,
+      "website": "www.netflix.com",
+      "ttm_eps": 12.4,
+      "future_pe_ratio_calculated": 31.2,
+      "future_pe_ratio_analyst": 12.3,
+      "sp_500": true,
+      "dow_jones": false,
+      "nasdaq_composite": false,
+      "russell_2000": false,
+      "sector": "Technology"
+    }
+  },
+  {
+    "model": "stocks.company",
+    "fields": {
+      "name": "Alphabet Class C",
+      "tick": "GOOG",
+      "ten_year_price": 1524.34,
+      "growth_rate_wsj": 24.3,
+      "growth_rate_yahoo": 12,
+      "pe_ratio": 12.4,
+      "website": "www.google.com",
+      "ttm_eps": 12.4,
+      "future_pe_ratio_calculated": 31.2,
+      "future_pe_ratio_analyst": 12.3,
+      "sp_500": true,
+      "dow_jones": false,
+      "nasdaq_composite": false,
+      "russell_2000": false,
+      "sector": "Technology"
+    }
+  },
+  {
+    "model": "stocks.company",
+    "fields": {
+      "name": "Amazon",
+      "tick": "AMZN",
+      "ten_year_price": 3242.31,
+      "growth_rate_wsj": 24.3,
+      "growth_rate_yahoo": 12,
+      "pe_ratio": 12.4,
+      "website": "www.amazon.com",
+      "ttm_eps": 12.4,
+      "future_pe_ratio_calculated": 31.2,
+      "future_pe_ratio_analyst": 12.3,
+      "sp_500": true,
+      "dow_jones": false,
+      "nasdaq_composite": false,
+      "russell_2000": false,
+      "sector": "Technology"
+    }
+  },
+  {
+    "model": "stocks.company",
+    "fields": {
+      "name": "Tesla",
+      "tick": "TSLA",
+      "ten_year_price": 1642.13,
+      "growth_rate_wsj": 24.3,
+      "growth_rate_yahoo": 12,
+      "pe_ratio": 12.4,
+      "website": "www.tesla.com",
+      "ttm_eps": 12.4,
+      "future_pe_ratio_calculated": 31.2,
+      "future_pe_ratio_analyst": 12.3,
+      "sp_500": true,
+      "dow_jones": false,
+      "nasdaq_composite": false,
+      "russell_2000": false,
+      "sector": "Technology"
+    }
+  }
+]
