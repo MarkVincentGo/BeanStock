@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 
 import { Home } from './Home';
@@ -15,10 +16,19 @@ import Nav from './Nav'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { relayStylePagination } from '@apollo/client/utilities/policies/pagination';
 
 const client = new ApolloClient({
   uri: 'graphql/',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache({
+    typePolicies: {
+      Query: {
+        fields: {
+          search: relayStylePagination(["query"]),
+        },
+      },
+    },
+  }),
 });
 
 let mainTheme = createMuiTheme({

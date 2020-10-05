@@ -51,13 +51,20 @@ interface IEdge {
   node: IStockSearchData
 }
 
+interface IPaginatedData {
+  edges: IEdge[],
+  pageInfo: any
+}
+
+interface IGraphQLData {
+  companies: IPaginatedData
+}
+
 export const Results: FunctionComponent<IResultsProps> = ({ query }): JSX.Element => {
   const classes = useStyles();
 
-  //const ref = useRef(initialValue)
-
   const STOCK_DATA = gql`
-    query {
+    query Companies($cursor: String) {
       companies(first: 5, after: $cursor) {
         pageInfo {
           startCursor,
@@ -77,36 +84,30 @@ export const Results: FunctionComponent<IResultsProps> = ({ query }): JSX.Elemen
         }
       }
     }
-  `
+  `;
 
-  const { loading, error, data, fetchMore } = useQuery(STOCK_DATA)
+  const [Data, setData] = useState<IGraphQLData | null>(null)
+
+  const { loading, error, data, fetchMore } = useQuery(STOCK_DATA);
+    useEffect(() => {
+      setData(data)
+    }, [data])
+    
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error {':('}</p>;
-  
-  const loadMore = () => {
-    fetchMore({
-       variables: {
-         cursor: data.companies.pageInfo.endCursor
-        },
-       updateQuery: (previousResult, { fetchMoreResult }) => {
-         const newEdges = fetchMoreResult.companies.edges;
-         const pageInfo = fetchMoreResult.compnies.pageInfo;
-
-         return newEdges.length ?  {
-           companies: {
-            edges: [...previousResult.companies.edges, ...newEdges],
-            pageInfo
-           }
-         } : previousResult;
-       }
-    })
+  const loadMore = async () => {
+    const {data: newData} = await fetchMore({
+       variables: {cursor: (Data as IGraphQLData).companies.pageInfo.endCursor}
+    });
+    setData(newData)
   }
 
   return (
     <Container className={classes.root} maxWidth="md">
       <Grid container spacing={3} direction="column">
         {
-          data.companies.edges.map((edge: IEdge, i: number) => {
+          (Data || data).companies.edges.map((edge: IEdge, i: number) => {
             let el = edge.node
             let fairPrice = calculateFairValue(el.tenYearPrice, query.returnValue)
             let mosPrice = calculateMOSValue(+fairPrice, query.returnValue)
