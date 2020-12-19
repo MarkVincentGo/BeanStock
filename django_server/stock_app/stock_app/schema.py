@@ -23,6 +23,8 @@ class Query(graphene.ObjectType):
 
     # For Pagination
     def resolve_companies(self, info, **kwargs):
+        # print(kwargs)
+        print(Company.objects.all()[0].pe_ratio)
         return Company.objects.all()
 
     def resolve_all_companies(self, info):

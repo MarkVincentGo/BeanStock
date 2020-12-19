@@ -77,17 +77,6 @@ export interface IQuery {
 export default (): JSX.Element => {
   const classes = useStyles();
 
-  const [query, setQuery] = useState<IQuery>({index: 'S&P 500', returnValue: 10, MOSValue: 10})
-  const handleQueryChange = (field: string, value: string | number): void => {
-    const newQuery: IQuery = { ...query };
-    newQuery[field] = value;
-    setQuery(newQuery);
-  }
-
-  const handleReset = (): void => {
-    setQuery({index: 'S&P 500', returnValue: 10, MOSValue: 10})
-  }
-
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={mainTheme}>
@@ -97,10 +86,10 @@ export default (): JSX.Element => {
               <Nav/>
               <Switch>
                 <Route path="/" exact>
-                  <Home changeQuery={handleQueryChange} query={query} clickReset={handleReset}/>
+                  <Home />
                 </Route>
                 <Route path="/results" exact>
-                  <Results query={query}/>
+                  <Results />
                 </Route>
               </Switch>
             </div>
