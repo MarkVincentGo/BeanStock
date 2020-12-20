@@ -32,7 +32,7 @@ def on_open(ws):
 
 if __name__ == "__main__":
     websocket.enableTrace(True)
-    ws = websocket.WebSocketApp("wss://ws.finnhub.io?token=f{os.environ.get('FINNHUB_API_KEY', '')},
+    ws = websocket.WebSocketApp(f"wss://ws.finnhub.io?token={os.environ.get('FINNHUB_API_KEY', '')}",
                               on_message = on_message,
                               on_error = on_error,
                               on_close = on_close)
