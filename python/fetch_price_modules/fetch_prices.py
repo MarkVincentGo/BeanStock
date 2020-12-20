@@ -2,6 +2,7 @@ import websocket
 import json
 import time
 import throttle
+import os
 
 # @throttle.wrap(1, 15)
 def on_message(ws, message):
